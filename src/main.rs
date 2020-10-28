@@ -218,6 +218,13 @@ fn main() -> Result<()> {
                 target.finish().unwrap();
             },
             glutin::event::Event::WindowEvent { event, .. } => match event {
+                glutin::event::WindowEvent::KeyboardInput { input, .. } => {
+                    if let Some(code) = input.virtual_keycode {
+                        if code == glutin::event::VirtualKeyCode::Escape || code == glutin::event::VirtualKeyCode::Q {
+                            *control_flow = glutin::event_loop::ControlFlow::Exit;
+                        }
+                    }
+                },
                 glutin::event::WindowEvent::Resized(..) => {
                     display.gl_window().window().request_redraw();
                 },
