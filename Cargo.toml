@@ -1,0 +1,10 @@
+[package]
+name = "just-breathe"
+version = "0.1.0"
+authors = ["Kenton Hamaluik <kenton@hamaluik.ca>"]
+edition = "2018"
+
+[dependencies]
+glium = "0.28"
+anyhow = "1.0"
+
