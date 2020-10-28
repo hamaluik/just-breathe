@@ -7,4 +7,5 @@ edition = "2018"
 [dependencies]
 glium = "0.28"
 anyhow = "1.0"
+palette = "0.5"
 
